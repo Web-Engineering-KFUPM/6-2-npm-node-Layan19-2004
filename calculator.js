@@ -214,16 +214,16 @@ After completing all TODOs, test your calculator:
   Expected output: Invalid operation. Use: add, subtract, multiply, or divide
 
 */
-import { add, subtract } from "./utils/operations.js";
+import { add, subtract, multiply, divide } from "./utils/operation.js";
 import { parseNumbers, isValidOperation } from "./utils/parser.js";
-import _, { divide, multiply } from "lodash";
+import _ from "lodash";
 
 const operation = process.argv[2];
 const numbers = process.argv.slice(3);
 
 if (!isValidOperation(operation)) {
     console.log("Invalid operation. Use: add, subtract, multiply, or divide");
-    return;
+    process.exit();
   }
 
   const nums = parseNumbers(numbers);
