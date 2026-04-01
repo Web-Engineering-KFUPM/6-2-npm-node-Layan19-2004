@@ -194,6 +194,8 @@ Example:
 Testing Your Calculator
 ===============================================================
 
+
+
 After completing all TODOs, test your calculator:
 
   node calculator.js add 5 10 15
@@ -212,4 +214,6 @@ After completing all TODOs, test your calculator:
   Expected output: Invalid operation. Use: add, subtract, multiply, or divide
 
 */
-
+import { add, subtract } from "./utils/operations.js";
+  import { parseNumbers, isValidOperation } from "./utils/parser.js";
+  import _ from "lodash";
